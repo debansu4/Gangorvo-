@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GANGORVO</title>
+  <title>Exam Portal</title>
   <style>
     * {
       margin: 0;
@@ -50,7 +50,7 @@
     }
 
     .logo h1 {
-      font-size: 22px;
+      font-size: 30px;
       font-weight: 700;
       color: #1e3a8a;
     }
@@ -76,9 +76,9 @@
   background: #4a90e2;
   color: white;
 }
-    /* Push content down (fixed header height fix) */
+    
     main {
-      margin-top: 100px;  /* ✅ eta change kore fix kora holo */
+      margin-top: 100px;  
     }
 
     /* Class Select */
@@ -219,14 +219,13 @@
     .about-card p {
   font-size: 14px;
   line-height: 1.5;
-  overflow: hidden;       /* hide extra text initially */
-  max-height: 60px;       /* preview height */
+  overflow: hidden;       
+  max-height: 60px;       
   transition: max-height 0.4s ease;
 }
 
 .about-card p.expanded {
-  max-height: 1000px;     /* full height when expanded */
-}
+  max-height: 1000px;     }
 
 .read-more-btn {
   background: none;
@@ -256,7 +255,7 @@
   <header>
     <div class="header-content">
       <div class="logo">
-        <h1>GANGORVO</h1>
+        <h1> জ্ঞানগর্ভ </h1>
       </div>
       <nav>
         <a href="https://debansu4.github.io/Subcode1/">Upcoming Exams</a>
@@ -268,41 +267,43 @@
   <!-- Main Content -->
   <main class="container">
     <!-- Class Select -->
-    <section class="class-select">
-      <p>Select Class:</p>
-      <button>Class 11</button>
-      <button>Class 12</button>
-      <button>Class 10</button>
-      <button>Class 9</button>
-    </section>
+  <section class="class-select">
+  <p>Select Class:</p>
+  <button onclick="filterCards('class-11')">Class 11</button>
+  <button onclick="filterCards('class-12')">Class 12</button>
+  <button onclick="filterCards('class-10')">Class 10</button>
+  <button onclick="filterCards('class-9')">Class 9</button>
+  <button onclick="filterCards('all')">Show All</button>
+</section>
 
     <!-- Cards -->
     <section class="cards">
-      <div class="card">
-        <h3>Class 12 SEM -IV</h3>
-        <p>Class 12 SEM - IV student cheack the details of the exam by click below</p>
-        <button>View</button>
-      </div>
-      <div class="card">
-        <h3>Class 11 SEM -II</h3>
-        <p>Class 11 SEM - II student cheack the details of the exam by click below</p>
-        <button>View</button>
-      </div>
-      <div class="card">
-        <h3>Class 10 mock-I exam</h3>
-        <p>Class 10  student cheack the details of the exam by click below</p>
-        <button>View</button>
-      </div>
-      <div class="card">
-        <h3>Class 09</h3>
-        <p>Class 9 student cheack the details of the exam by click below</p>
-        <button>View</button>
-      </div>
+   <div class="card class-12">
+  <h3>Class 12 SEM -IV</h3>
+  <p>Class 12 SEM - IV student cheack the details of the exam by click below</p>
+  <button>View</button>
+</div>
+
+<div class="card class-11">
+  <h3>Class 11 SEM -II</h3>
+  <p>Class 11 SEM - II student cheack the details of the exam by click below</p>
+  <button>View</button>
+</div>
+
+<div class="card class-10">
+  <h3>Class 10 mock exam</h3>
+  <p>Class 10 student cheack the details of the exam by click below</p>
+  <button>View</button>
+</div>
+
+<div class="card class-9">
+  <h3>Class 09 Mock </h3>
+  <p>Class 9 student cheack the details of the exam by click below</p><a href="https://debansu4.github.io/Sub-class-09/">
+  <button>View</button></a>
+</div>
     </section>
 
-    <div class="more">
-      <a href="#">→ More...</a>
-    </div>
+ 
 
     <!-- About Us -->
     <section class="about">
@@ -341,6 +342,18 @@ function toggleText(id, btn) {
     btn.textContent = "Read More";
   }
 }
+
+function filterCards(className) {
+  const cards = document.querySelectorAll('.card');
+  cards.forEach(card => {
+    if(className === 'all') {
+      card.style.display = 'block';
+    } else {
+      card.style.display = card.classList.contains(className) ? 'block' : 'none';
+    }
+  });
+}
+
 </script>
 </body>
 </html>
