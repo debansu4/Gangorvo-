@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GAANGORVO</title>
+  <title>জ্ঞানগর্ভ</title>
   <style>
     * {
       margin: 0;
@@ -11,19 +11,16 @@
       box-sizing: border-box;
       font-family: "Poppins", sans-serif;
     }
-
     body {
-      background: #f9fafc;
+      background: #f9fafc  
       color: #333;
     }
-
     .container {
       max-width: 1200px;
       margin: 0 auto;
       padding: 0 20px;
     }
 
-    /* Header */
     header {
       position: fixed;
       top: 0;
@@ -43,21 +40,16 @@
       justify-content: space-between;
     }
 
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
     .logo h1 {
       font-size: 30px;
       font-weight: 700;
       color: #1e3a8a;
+      
     }
 
     nav {
       display: flex;
-      gap: 25px;
+      gap: 20px;
     }
 
     nav a {
@@ -71,26 +63,23 @@
     }
 
     nav a:hover,
- 
-      nav a.active {
-  background: #4a90e2;
-  color: white;
-}
+    nav a.active {
+      background: #4a90e2;
+      color: white;
+    }
     
     main {
       margin-top: 100px;  
     }
-
-    /* Class Select */
+    
     .class-select {
-      margin: 45px auto;
+      margin: 82px auto;
       text-align: center;
-    }
-
-    .class-select p {
-      font-size: 16px;
-      font-weight: 600;
-      margin-bottom: 12px;
+      display: flex;          
+      gap: 8px;              
+      overflow-x: auto;       
+      white-space: nowrap;    
+      padding-bottom: 5px;  
     }
 
     .class-select button {
@@ -98,20 +87,15 @@
       background: #e0e7ff;
       color: #1e3a8a;
       font-weight: 500;
-      margin: 6px;
+      margin: 6px 4px;       
       padding: 10px 20px;
       border-radius: 20px;
       cursor: pointer;
       transition: 0.3s;
       font-size: 15px;
+      flex: 0 0 auto;        
     }
 
-    .class-select button:hover {
-      background: #4a90e2;
-      color: white;
-    }
-
-    /* Cards */
     .cards {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -137,11 +121,6 @@
       margin-bottom: 10px;
     }
 
-    .card p {
-      font-size: 14px;
-      color: #555;
-    }
-
     .card button {
       margin-top: 15px;
       padding: 10px 20px;
@@ -158,19 +137,6 @@
       background: #1e3a8a;
     }
 
-    .more {
-      text-align: center;
-      margin: 20px 0;
-    }
-
-    .more a {
-      color: #4a90e2;
-      font-weight: bold;
-      text-decoration: none;
-      font-size: 16px;
-    }
-
-    /* About Us */
     .about {
       padding: 40px 20px;
       background: #f1f5f9;
@@ -207,38 +173,29 @@
       margin-bottom: 15px;
     }
 
-    .about-card h3 {
-      font-size: 18px;
-      margin-bottom: 10px;
-    }
-
     .about-card p {
       font-size: 14px;
       line-height: 1.5;
+      overflow: hidden;       
+      max-height: 60px;       
+      transition: max-height 0.4s ease;
     }
-    .about-card p {
-  font-size: 14px;
-  line-height: 1.5;
-  overflow: hidden;       
-  max-height: 60px;       
-  transition: max-height 0.4s ease;
-}
 
-.about-card p.expanded {
-  max-height: 1000px;     }
+    .about-card p.expanded {
+      max-height: 1000px;     
+    }
 
-.read-more-btn {
-  background: none;
-  border: none;
-  color: #4a90e2;
-  cursor: pointer;
-  font-weight: bold;
-  margin-top: 10px;
-  padding: 0;
-  font-size: 14px;
-}
+    .read-more-btn {
+      background: none;
+      border: none;
+      color: #4a90e2;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 10px;
+      padding: 0;
+      font-size: 14px;
+    }
 
-    /* Footer */
     footer {
       text-align: center;
       padding: 20px;
@@ -255,11 +212,11 @@
   <header>
     <div class="header-content">
       <div class="logo">
-        <h1> জ্ঞানগর্ভ </h1>
+        <h1>জ্ঞানগর্ভ</h1>
       </div>
       <nav>
-        <a href="https://debansu4.github.io/Subcode1/">Upcoming Exams</a>
-        <a href="https://debansu4.github.io/Subcode2/">Results</a>
+        <a href="https://debansu4.github.io/Subcode1/">আসন্ন পরীক্ষা</a>
+        <a href="https://debansu4.github.io/Subcode2/">ফলাফল</a>
       </nav>
     </div>
   </header>
@@ -267,79 +224,106 @@
   <!-- Main Content -->
   <main class="container">
     <!-- Class Select -->
-  <section class="class-select">
-  <p>Select Class:</p>
-  <button onclick="filterCards('class-11')">Class 11</button>
-  <button onclick="filterCards('class-12')">Class 12</button>
-  <button onclick="filterCards('class-10')">Class 10</button>
-  <button onclick="filterCards('class-9')">Class 9</button>
-  <button onclick="filterCards('all')">Show All</button>
-</section>
+    <section class="class-select">
+      <button onclick="filterCards('class-12')">শ্রেণী ১২</button>
+      <button onclick="filterCards('class-11')">শ্রেণী ১১</button>
+      <button onclick="filterCards('class-10')">শ্রেণী ১০</button>
+      <button onclick="filterCards('class-9')">শ্রেণী ৯</button>
+      <button onclick="filterCards('class-8')">শ্রেণী ৮</button>
+      <button onclick="filterCards('class-7')">শ্রেণী ৭</button>
+      <button onclick="filterCards('all')">সব দেখাও</button>
+    </section>
 
     <!-- Cards -->
     <section class="cards">
-   <div class="card class-12">
-  <h3>Class 12 SEM -IV</h3>
-  <p>Class 12 SEM - IV student cheack the details of the exam by click below</p>
-  <button>View</button>
-</div>
+      <div class="card class-12">
+        <h3>শ্রেণী ১২ সেমেস্টার - IV</h3>
+        <p>শ্রেণী ১২ এর ছাত্রছাত্রীগণ পরীক্ষার বিস্তারিত জানতে নিচে ক্লিক করুন</p>
+        <button>বিস্তারিত দেখুন</button>
+      </div>
 
-<div class="card class-11">
-  <h3>Class 11 SEM -II</h3>
-  <p>Class 11 SEM - II student cheack the details of the exam by click below</p>
-  <button>View</button>
-</div>
+      <div class="card class-11">
+        <h3>শ্রেণী ১১ সেমেস্টার - II</h3>
+        <p>শ্রেণী ১১ এর ছাত্রছাত্রীগণ পরীক্ষার বিস্তারিত জানতে নিচে ক্লিক করুন</p>
+        <button>বিস্তারিত দেখুন</button>
+      </div>
 
-<div class="card class-10">
-  <h3>Class 10 mock exam</h3>
-  <p>Class 10 student cheack the details of the exam by click below</p>
-  <button>View</button>
-</div>
+      <div class="card class-10">
+        <h3>শ্রেণী ১০ মক পরীক্ষা</h3>
+        <p>শ্রেণী ১০ এর ছাত্রছাত্রীগণ পরীক্ষার বিস্তারিত জানতে নিচে ক্লিক করুন</p>
+        <button>বিস্তারিত দেখুন</button>
+      </div>
 
-<div class="card class-9">
-  <h3>Class 09 Mock </h3>
-  <p>Class 9 student cheack the details of the exam by click below</p><a href="https://debansu4.github.io/Sub-class-09/">
-  <button>View</button></a>
-</div>
+      <div class="card class-9">
+        <h3>শ্রেণী ৯ মক পরীক্ষা</h3>
+        <p>শ্রেণী ৯ এর ছাত্রছাত্রীগণ পরীক্ষার বিস্তারিত জানতে নিচে ক্লিক করুন</p>
+        <a href="https://debansu4.github.io/Sub-class-09/"><button>বিস্তারিত দেখুন</button></a>
+      </div>
+
+      <div class="card class-8">
+        <h3>শ্রেণী ৮ মক পরীক্ষা</h3>
+        <p>শ্রেণী ৮ এর ছাত্রছাত্রীগণ পরীক্ষার বিস্তারিত জানতে নিচে ক্লিক করুন</p>
+        <button>বিস্তারিত দেখুন</button>
+      </div>
+
+      <div class="card class-7">
+        <h3>শ্রেণী ৭ মক পরীক্ষা</h3>
+        <p>শ্রেণী ৭ এর ছাত্রছাত্রীগণ পরীক্ষার বিস্তারিত জানতে নিচে ক্লিক করুন</p>
+        <button>বিস্তারিত দেখুন</button>
+      </div>
     </section>
-
- 
 
     <!-- About Us -->
     <section class="about">
-      <h2>About Us</h2>
+      <h2>আমাদের সম্পর্কে</h2>
       <div class="about-container">
-      <div class="about-card">
-  <img src="https://i.ibb.co/YBBym6vB/FB-IMG-1746511492728.jpg" alt="About Image">
-  <h3>About Sir</h3>
-  <p id="sirText">
-    <strong>Shubhankar Banik</strong> is a passionate and dedicated Bengali Subject Teacher with over<strong> 7 years of teaching experience.</strong> With a strong academic foundation—<strong>double M.A. in Bengali and a B.Ed.</strong>—he brings both expertise and enthusiasm to the classroom. Known for his innovative teaching methods and ability to connect with students, Shubhankar inspires a love for the Bengali language and literature. His commitment to nurturing young minds ensures that every student not only excels academically but also develops a deep appreciation for their cultural heritage.
-  </p>
-  <button class="read-more-btn" onclick="toggleText('sirText', this)">Read More</button>
-</div>
-<div class="about-card"><h3>About site</h3>
-      <p id="siteText">
-  This portal helps students easily check exam schedules, results, and updates in one place. 
-</p>
-<button class="read-more-btn" onclick="toggleText('siteText', this)">Read More</button>
-</div>
+        <div class="about-card">
+          <img src="https://i.ibb.co/YBBym6vB/FB-IMG-1746511492728.jpg" alt="About Image">
+          <h3>স্যার সম্পর্কে</h3>
+          <p id="sirText">
+            <strong>শুভঙ্কর বণিক</strong> একজন নিবেদিতপ্রাণ বাংলা বিষয় শিক্ষক যার রয়েছে <strong>৭ বছরের বেশি অভিজ্ঞতা।</strong>  
+            তিনি <strong>দ্বিগুণ এম.এ. এবং বি.এড.</strong> ডিগ্রি অর্জন করেছেন।  
+            তাঁর নতুন ধরণের পড়ানোর কৌশল ও ছাত্রদের সাথে সংযোগ স্থাপনের ক্ষমতা ছাত্রদের মধ্যে বাংলা ভাষা ও সাহিত্যের প্রতি ভালোবাসা জাগিয়ে তোলে।  
+            ছাত্রদের মানসিক ও সাংস্কৃতিক বিকাশে তাঁর অবদান অপরিসীম।
+          </p>
+          <button class="read-more-btn" onclick="toggleText('sirText', this)">আরও পড়ুন</button>
+        </div>
+
+        <div class="about-card">
+          <img src="https://i.ibb.co/353H7HH0/IMG-20250920-WA0008.jpg">
+          <h3>ওয়েবসাইট সম্পর্কে</h3>
+          <p id="siteText">
+            এই পোর্টাল শিক্ষার্থীদের সহজে পরীক্ষা সূচি, ফলাফল ও আপডেট এক জায়গায় দেখতে সাহায্য করে।
+          </p>
+          <button class="read-more-btn" onclick="toggleText('siteText', this)">আরও পড়ুন</button>
+        </div>
+
+        <div class="about-card">
+          <h3>যোগাযোগ</h3>
+          <p>
+            📮 হাবরা<br>
+            📧 banikshubhankar76@gmail.com<br>
+            📞 +91 97359 89677
+          </p>
+        </div>
       </div>
     </section>
   </main>
 
   <!-- Footer -->
   <footer>
-    <p>© 2025 Exam Portal | All Rights Reserved</p>
-    <a href="https://www.facebook.com/share/1PDWsExZwG/" style="color:red">The website desgined by © DEBANSU DAS</a>
+    <p>© ২০২৫ পরীক্ষা পোর্টাল | সর্বস্বত্ব সংরক্ষিত</p>
+    <a href="https://www.facebook.com/share/1PDWsExZwG/" style="color:red">ওয়েবসাইট ডিজাইন করেছেন © দেবাংশু দাস</a>
   </footer>
+
 <script>
 function toggleText(id, btn) {
   const para = document.getElementById(id);
   para.classList.toggle('expanded');
   if (para.classList.contains('expanded')) {
-    btn.textContent = "Read Less";
+    btn.textContent = "কম দেখান";
   } else {
-    btn.textContent = "Read More";
+    btn.textContent = "আরও পড়ুন";
   }
 }
 
@@ -353,7 +337,6 @@ function filterCards(className) {
     }
   });
 }
-
 </script>
 </body>
-</html>
+        </html>
