@@ -10,6 +10,9 @@
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap');
+        html, body {
+    overflow-x: hidden; /* Horizontal scroll off kore dibe */
+}
 
         body {
             font-family: 'Hind Siliguri', sans-serif;
@@ -36,8 +39,12 @@
     <nav class="bg-white shadow-lg fixed w-full z-50">
         <div class="max-w-6xl mx-auto px-4">
             <div class="flex justify-between items-center py-4">
-                <div class="flex items-center space-x-4">
-                    <div class="text-2xl font-bold text-indigo-600">জ্ঞানগর্ভ</div>
+                
+                
+<div class="flex items-center space-x-2">
+    <!-- Logo / Icon -->
+    <img src="https://i.ibb.co/353H7HH0/IMG-20250920-WA0008.jpg" alt="Logo" class="w-10 h-10">
+                    <div class="text-4xl font-bold text-indigo-600">জ্ঞানগর্ভ</div>
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="#classes" class="text-gray-700 hover:text-indigo-600 transition">ক্লাসসমূহ</a>
@@ -53,7 +60,7 @@
                 </div>
             </div>
         </div>
-        <div class="mobile-menu hidden md:hidden bg-white py-4 px-4">
+        <div class="mobile-menu hidden bg-white py-4 px-4 w-full absolute top-full left-0 shadow-md z-40">
             <a href="#classes" class="block py-2 text-gray-700 hover:text-indigo-600 transition">ক্লাসসমূহ</a>
             <a href="#" class="block py-2 text-gray-700 hover:text-indigo-600 transition">নোটস</a>
             <a href="https://debansu4.github.io/Subcode2/" class="block py-2 text-gray-700 hover:text-indigo-600 transition">ফলাফল</a>
@@ -63,7 +70,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero-gradient text-white min-h-screen flex items-center justify-center">
+    <header class="hero-gradient text-white h-[70vh] flex items-center justify-center">
         <div class="max-w-6xl mx-auto px-4 text-center">
             <h1 class="text-4xl md:text-5xl font-bold mb-6" data-aos="fade-up">শিক্ষার আলোকবর্তিকা</h1>
             <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
@@ -166,7 +173,7 @@
 
             <div class="flex flex-col lg:flex-row-reverse items-center gap-12">
                 <div class="lg:w-1/2" data-aos="fade-left">
-                    <img src="https://i.ibb.co/353H7HH0/IMG-20250920-WA0008.jpg" alt="ওয়েবসাইট সম্পর্কে" class="rounded-lg shadow-lg w-full object-cover">
+                    <img src="https://i.ibb.co/353H7HH0/IMG-20250920-WA0008.jpg" alt="ওয়েবসাইট সম্পর্কে" class="rounded-full shadow-lg w-15 h-15 object-cover">
                 </div>
                 <div class="lg:w-1/2" data-aos="fade-right">
                     <h3 class="text-2xl font-semibold mb-4">ওয়েবসাইট সম্পর্কে</h3>
@@ -262,4 +269,4 @@
         feather.replace();
     </script>
 </body>
-</html>
+                        </html>
